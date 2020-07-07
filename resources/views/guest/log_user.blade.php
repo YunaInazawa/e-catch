@@ -13,7 +13,7 @@
                 <p></p>
                 <form>
                     <div>メールアドレス</div>
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Mail Address" autofocus>
+                    <input type="email" id="inputMail" class="form-control" placeholder="Mail Address" autofocus>
                     <br>
                     <div>パスワード</div>
                     <input type="password" id="inputPassword" class="form-control" placeholder="Password">

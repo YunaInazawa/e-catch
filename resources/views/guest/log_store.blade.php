@@ -13,7 +13,7 @@
                 <p></p>
                 <form>
                     <div>店舗ID</div>
-                    <input type="storeid" id="inputStoreID" class="form-control" placeholder="Store ID" autofocus>
+                    <input type="number" id="inputStoreID" class="form-control" placeholder="Store ID" autofocus>
                     <br>
                     <div>パスワード</div>
                     <input type="password" id="inputPassword" class="form-control" placeholder="Password">
