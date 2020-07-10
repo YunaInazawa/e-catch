@@ -1,3 +1,4 @@
+@extends('layouts.header_guest')
 <!DOCTYPE html>
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}" defer></script>
@@ -7,6 +8,7 @@
     <head>
     </head>
     <body>
+    @section('content')
         <div class="container">
             <p>Login</p>
             <div class="card card-container">
@@ -24,5 +26,6 @@
             </div>
             <a href="{{ url('/log_user') }}">会員に切り替え</a>
         </div>
+    @endsection
     </body>
 </html>

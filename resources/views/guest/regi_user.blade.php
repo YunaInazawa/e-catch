@@ -1,3 +1,4 @@
+@extends('layouts.header_guest')
 <!DOCTYPE html>
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}" defer></script>
@@ -7,6 +8,7 @@
     <head>
     </head>
     <body>
+    @section('content')
         <div class="container">
             <div>会員登録</div>
             <form>
@@ -49,5 +51,6 @@
                 <button class="btn btn-lg btn-primary" type="submit">次へ</button>
             </form>
         </div>
+    @endsection
     </body>
 </html>
