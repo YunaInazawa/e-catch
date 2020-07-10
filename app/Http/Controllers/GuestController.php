@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class GuestController extends Controller
 {
     public function home()
     {
-        return view('guest/home');
+        $data = User::all();
+        return view('guest/home', ['data' => $data]);
     }
 
     public function log_store()

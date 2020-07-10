@@ -4,4 +4,8 @@
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
   
-  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-primary">Primary</button><br />
+
+  @foreach($data as $d)
+  {{ $d->name }}<br />
+  @endforeach
