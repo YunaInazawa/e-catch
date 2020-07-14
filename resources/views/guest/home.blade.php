@@ -15,13 +15,3 @@
     </body>
 @endsection
 </html>
-
-<<<<<<< HEAD
-  
-  <button type="button" class="btn btn-primary">Primary</button><br />
-
-  @foreach($data as $d)
-  {{ $d->name }}<br />
-  @endforeach
-=======
->>>>>>> 4db4cf002c3dced635bfc3201957d577d2010aab
