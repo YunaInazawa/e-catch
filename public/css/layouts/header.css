@@ -1,0 +1,11 @@
+.navbar{
+    background-color: gold;
+}
+
+.nav-item{
+    margin-right: 10px;
+}
+
+.navbar-toggler{
+    background-color: lemonchiffon;
+}
