@@ -22,3 +22,7 @@ Route::get('/regi_user', 'GuestController@regi_user');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::prefix('store')->namespace('store')->name('store.')->group(function(){
+    Auth::routes();
+    Route::get('/home', 'StoreHomeController@index')->name('store_home');
+});

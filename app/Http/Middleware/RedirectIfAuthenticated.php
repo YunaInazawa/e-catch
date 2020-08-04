@@ -22,6 +22,17 @@ class RedirectIfAuthenticated
             return redirect(RouteServiceProvider::HOME);
         }
 
+        // if (Auth::guard($guard)->check()) {
+        //     if($guard == 'store')
+        //         return redirect(RouteServiceProvider::STORE_HOME);
+        //     return redirect(RouteServiceProvider::HOME);
+        // }
+
+        // if(Auth::guard()->check())
+        //     return redirect(RouteServiceProvider::HOME);
+        // if(Auth::guard('store')->check()) 
+        //     return redirect(RouteServiceProvider::STORE_HOME);
+
         return $next($request);
     }
 }

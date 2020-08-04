@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app_store')
 
 @section('content')
 <div class="container">
@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('store.register') }}">
                         @csrf
 
                         <div class="form-group row">
@@ -18,6 +18,20 @@
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                 @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="login_id" class="col-md-4 col-form-label text-md-right">{{ __('Login Id') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="login_id" type="text" class="form-control @error('login_id') is-invalid @enderror" name="login_id" value="{{ old('login_id') }}" required autocomplete="login_id">
+
+                                @error('login_id')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -63,8 +77,10 @@
 
                         <input type="hidden" name="postal_code" value="999-9999" autocomplete="postal_code">
                         <input type="hidden" name="street_addr" value="addr" autocomplete="street_addr">
-                        <input type="hidden" name="sex" value="man or woman" autocomplete="sex">
-                        <input type="hidden" name="birth_day" value="1998-07-14" autocomplete="birth_day">
+                        <input type="hidden" name="TEL" value="000-0000-0000" autocomplete="TEL">
+                        <input type="hidden" name="rep_first_name" value="first_name" autocomplete="rep_first_name">
+                        <input type="hidden" name="rep_last_name" value="last_name" autocomplete="rep_last_name">
+                        <input type="hidden" name="genre_id" value="1" autocomplete="genre_id">
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
