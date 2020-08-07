@@ -94,6 +94,15 @@
                                 <p>※ここにエラー文が入る←エラーが発生した時だけ表示させたい。</p>
                             </div>
                         </div>
+
+                        <div class="form-group row">
+                            <label class="col-md-4 col-form-label text-md-right">{{ __('住所') }}</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="street_addr" placeholder="○○県××町９９" autocomplete="street_addr">
+                                <p>※ここにエラー文が入る←エラーが発生した時だけ表示させたい。</p>
+                            </div>
+                        </div>
+                        
                         
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('パスワード') }}</label>
@@ -117,8 +126,7 @@
                             </div>
                         </div>
 
-                        <input type="hidden" name="postal_code" value="999-9999" autocomplete="postal_code">
-                        <input type="hidden" name="street_addr" value="addr" autocomplete="street_addr">
+                        
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
