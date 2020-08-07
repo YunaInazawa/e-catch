@@ -39,8 +39,8 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
-        // $this->middleware('guest:store');
+        // $this->middleware('guest');
+        $this->middleware('guest:store');
     }
 
     /**
@@ -53,7 +53,7 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
-            'login_id' => ['required', 'string', 'max:255', 'unique:stores'],
+            'login_id' => ['required', 'string', 'max:255', 'alpha_num', 'unique:stores'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:stores'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);

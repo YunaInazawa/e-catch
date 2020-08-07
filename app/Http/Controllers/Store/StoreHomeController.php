@@ -14,7 +14,7 @@ class StoreHomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('auth:store');
         // $this->middleware('guest:store')->except('logout');
     }
 
