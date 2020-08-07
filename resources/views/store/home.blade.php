@@ -15,6 +15,7 @@
                     @endif
 
                     You are logged in!
+                    {{ Auth::guard('store')->user() }}
                 </div>
             </div>
         </div>
