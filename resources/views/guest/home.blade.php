@@ -10,6 +10,13 @@
         <img><p>それっぽいいらすと
         </p>
         <button>←</button>ここにぼやっとイベント表示<button>右</button><br>
+
+        <!-- 2020/08/07 Inazawa イベント情報取得 TEST -->
+        @foreach( $eventData as $d )
+        -> {{ $d->id }} : {{ $d->title }} : {{ $d->content }} : {{ $d->postal_code }} : {{ $d->street_addr }} : {{ $d->store->name }} : {{ $d->genre->content }}
+        <br />
+        @endforeach
+
         <button>ログイン</button><br>
         <p>新規の方は<a>こちら</a>から</p>
     </body>
