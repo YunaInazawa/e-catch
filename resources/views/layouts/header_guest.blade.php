@@ -10,9 +10,9 @@
       <ul class="navbar-nav">
         <li class="nav-item"><a href="#">e-catchとは？</a></li>
         <li class="nav-item"><a href="#">会員と店舗とは？</a></li>
-        <li class="nav-item"><a href="{{ url('/regi_user') }}">会員登録</a></li>
-        <li class="nav-item"><a href="{{ url('/regi_store') }}">店舗登録</a></li>
-        <li class="nav-item"><a href="{{ url('/log_user') }}">ログイン</a></li>
+        <li class="nav-item"><a href="{{ url('/register') }}">会員登録</a></li>
+        <li class="nav-item"><a href="{{ url('/store/register') }}">店舗登録</a></li>
+        <li class="nav-item"><a href="{{ url('/login') }}">ログイン</a></li>
       </ul>
     </div>
   </nav>
