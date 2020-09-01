@@ -27,8 +27,7 @@ class StoreController extends Controller
         $end = $request->end;
         $content = $request->content;
         $url = $request->url;
-        $file_name = $request->file('image')->getClientOriginalName();
-        $path = $request->file('image')->storeAs('event', $file_name, 'public');
+        $path = $request->file('image')->store('public/event');
         $image = basename($path);
 
         // events 追加
@@ -50,6 +49,6 @@ class StoreController extends Controller
          * datetime-local 確認後、登録てすと
          **/
 
-        return redirect('/store/event_create')->with('flash_message', $image . ' の投稿が完了しました');
+        return redirect('/store/event_create')->with('flash_message', $title . ' の投稿が完了しました');
     }
 }
