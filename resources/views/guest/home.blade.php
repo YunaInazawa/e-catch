@@ -15,6 +15,10 @@
         @foreach( $eventData as $d )
         -> {{ $d->id }} : {{ $d->title }} : {{ $d->content }} : {{ $d->postal_code }} : {{ $d->street_addr }} : {{ $d->store->name }} : {{ $d->genre->content }}
         <br />
+        @if( !is_null($d->image) )
+        <img src="{{ asset('storage/event/' . $d->image) }}">
+        <br />
+        @endif
         @endforeach
 
         <button>ログイン</button><br>

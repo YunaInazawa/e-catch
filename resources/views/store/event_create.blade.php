@@ -20,7 +20,7 @@
         <div class="card">
             <div class="card-header">{{ __('イベント新規作成') }}</div>
             <div class="card-body">
-                <form method="POST" action="{{ route('event_new') }}">
+                <form method="POST" action="{{ route('event_new') }}" enctype='multipart/form-data'>
                 @csrf
 
                     <div class="form-group row">
