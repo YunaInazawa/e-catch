@@ -6,6 +6,7 @@
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
 
+<link href="{{ asset('css/layouts/login.css') }}" rel="stylesheet">
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -21,7 +22,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('メールアドレス') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Mail Address" autofocus>
+                                <input id="email" type="email" class="inputs form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Mail Address" autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -35,7 +36,7 @@
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('パスワード') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Password">
+                                <input id="password" type="password" class="inputs form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">

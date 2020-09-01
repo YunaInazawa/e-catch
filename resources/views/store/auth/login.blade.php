@@ -5,6 +5,7 @@
 <!-- Styles -->
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+<link href="{{ asset('css/layouts/login.css') }}" rel="stylesheet">
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -21,7 +22,7 @@
                             <label for="login_id" class="col-md-4 col-form-label text-md-right">{{ __('店舗ID') }}</label>
 
                             <div class="col-md-6">
-                                <input id="login_id" type="login_id" class="form-control @error('login_id') is-invalid @enderror" name="login_id" value="{{ old('login_id') }}"  placeholder="Store ID" required autocomplete="login_id" autofocus>
+                                <input id="login_id" type="login_id" class="inputs form-control @error('login_id') is-invalid @enderror" name="login_id" value="{{ old('login_id') }}"  placeholder="Store ID" required autocomplete="login_id" autofocus>
 
                                 @error('login_id')
                                     <span class="invalid-feedback" role="alert">
@@ -35,7 +36,7 @@
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('パスワード') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password"  placeholder="Password" required autocomplete="current-password">
+                                <input id="password" type="password" class="inputs form-control @error('password') is-invalid @enderror" name="password"  placeholder="Password" required autocomplete="current-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
