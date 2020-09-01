@@ -1,0 +1,14 @@
+.required_item{
+    color: red;
+    font: bold;
+    font-size: 14px;
+    padding: 2px;
+    margin-right: 3px;
+    border-radius: 5px;
+}
+.inputs:focus{background: lavender;}
+.inputs:required{background: pink;}
+.inputs:valid{background: transparent;}
+.card{
+    margin-top: 50px;
+}
