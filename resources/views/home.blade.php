@@ -15,7 +15,39 @@
                     @endif
 
                     {{ __('You are logged in!') }}
-                    {{ Auth::user() }}
+
+                    <!-- ログインユーザ -->
+                    <br /><br />
+                    【My Data】<br />
+                    -> {{ Auth::user()->id }} : {{ Auth::user()->name }} : {{ Auth::user()->email }} : {{ Auth::user()->sex }}<br />
+
+                    <!-- お気に入りユーザ -->
+                    <br />
+                    【Favorite_User】<br />
+                    @foreach( $favorite_user as $d )
+                    -> {{ $d->name }}<br />
+                    @endforeach
+
+                    <!-- お気に入り店舗 -->
+                    <br />
+                    【Favorite_Store】<br />
+                    @foreach( $favorite_store as $d )
+                    -> {{ $d->name }}<br />
+                    @endforeach
+
+                    <!-- お気に入りイベント -->
+                    <br />
+                    【Favorite_event】<br />
+                    @foreach( $favorite_event as $d )
+                    -> {{ $d->title }}<br />
+                    @endforeach
+
+                    <!-- お気に入りコメント（掲示板実装後？） -->
+                    <br />
+                    【Favorite_comment】<br />
+                    @foreach( $favorite_comment as $d )
+                    -> {{ $d->title }}<br />
+                    @endforeach
                 </div>
             </div>
         </div>
