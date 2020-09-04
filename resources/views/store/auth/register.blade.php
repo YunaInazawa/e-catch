@@ -35,9 +35,9 @@
 
                             <div class="col-md-6">
                                 <select class="form-control" name="genre_id" autocomplete="genre_id">
-                                    <option value="1">飲食店</option>
-                                    <option value="2">スポーツ</option>
-                                    <option value="3">その他</option>
+                                    @foreach( $genreData as $d )
+                                    <option value="{{ $d->id }}">{{ $d->content }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>

@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
+use App\Genre;
 
 class RegisterController extends Controller
 {
@@ -83,7 +84,9 @@ class RegisterController extends Controller
 
     public function showRegistrationForm()
     {
-        return view('store.auth.register');
+        $genreData = Genre::all();
+
+        return view('store.auth.register', ['genreData' => $genreData]);
     }
 
     protected function guard()

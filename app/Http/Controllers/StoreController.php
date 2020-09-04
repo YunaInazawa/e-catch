@@ -16,7 +16,7 @@ class StoreController extends Controller
         return view('store.event_create', ['genreData' => $genreData]);
     }
 
-    public function event_new( Request $request ) { // url image 後回し
+    public function event_new( Request $request ) {
         $request->session()->regenerateToken();
         $now = Carbon::now();
 
