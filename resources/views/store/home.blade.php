@@ -34,7 +34,7 @@
                     @foreach( $event_data as $data )
                     -> {{ $data->id }} : {{ $data->title }} : {{ $data->content }} : {{ $data->start }} ~ {{ $data->end }} : {{ $data->url }} : {{ $data->genre->content }}<br />
                     @if( !is_null($data->image) )
-                    <img src="{{ asset('storage/event/' . $data->image) }}">
+                    <img src="{{ asset('storage/event/' . $data->image) }}" width="200px">
                     <br />
                     @endif
                     <br />
