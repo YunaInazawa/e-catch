@@ -22,7 +22,23 @@
                     @endif
 
                     You are logged in!
-                    {{ Auth::guard('store')->user() }}
+                    
+                    <!-- ログイン店舗 -->
+                    <br /><br />
+                    【My Store Data】<br />
+                    -> {{ Auth::guard('store')->user()->id }} : {{ Auth::guard('store')->user()->name }} : {{ Auth::guard('store')->user()->rep_last_name }} : {{ Auth::guard('store')->user()->genre->content }}<br />
+                    
+                    <!-- 投稿イベント -->
+                    <br />
+                    【My Event】<br />
+                    @foreach( $event_data as $data )
+                    -> {{ $data->id }} : {{ $data->title }} : {{ $data->content }} : {{ $data->start }} ~ {{ $data->end }} : {{ $data->url }} : {{ $data->genre->content }}<br />
+                    @if( !is_null($data->image) )
+                    <img src="{{ asset('storage/event/' . $data->image) }}">
+                    <br />
+                    @endif
+                    <br />
+                    @endforeach
                 </div>
             </div>
         </div>
