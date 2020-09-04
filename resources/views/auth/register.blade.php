@@ -12,7 +12,7 @@
                 <div class="card-header">{{ __('会員登録') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}" enctype='multipart/form-data'>
                         @csrf
 
                         <div class="form-group row">
@@ -93,7 +93,7 @@
                         <div class="form-group row">
                             <label class="col-md-4 col-form-label text-md-right">{{ __('アイコン') }}</label>
                             <div class="col-md-6">
-                            <input type="file" id="inputIcon">
+                            <input type="file" id="inputIcon" name="inputIcon">
                             </div>
                         </div>
                         
