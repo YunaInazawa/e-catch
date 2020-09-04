@@ -52,6 +52,5 @@ class HomeController extends Controller
             }
         }
         return view('home', ['favorite_user' => $favorite_user, 'favorite_store' => $favorite_store, 'favorite_event' => $favorite_event, 'favorite_comment' => $favorite_comment]);
-        //return view('home', ['data' => $favoriteData]);
     }
 }

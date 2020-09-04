@@ -64,6 +64,10 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        //$path = $request->file('inputIcon')->store('public/userIcon');
+        $path = $data['inputIcon']->store('public/userIcon');
+        $image = basename($path);
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -72,6 +76,7 @@ class RegisterController extends Controller
             'street_addr' => $data['street_addr'], 
             'sex' => $data['sex'], 
             'birth_day' => $data['birth_day'], 
+            'icon' => $image,
         ]);
     }
 }

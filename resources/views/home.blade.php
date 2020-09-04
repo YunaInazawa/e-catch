@@ -20,6 +20,10 @@
                     <br /><br />
                     【My Data】<br />
                     -> {{ Auth::user()->id }} : {{ Auth::user()->name }} : {{ Auth::user()->email }} : {{ Auth::user()->sex }}<br />
+                    @if( !is_null(Auth::user()->icon) )
+                    <img src="{{ asset('storage/userIcon/' . Auth::user()->icon) }}" width="200px">
+                    <br />
+                    @endif
 
                     <!-- お気に入りユーザ -->
                     <br />

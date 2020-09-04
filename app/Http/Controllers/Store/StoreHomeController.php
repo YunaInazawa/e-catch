@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Store;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Auth;
+use App\Event;
 
 class StoreHomeController extends Controller
 {
@@ -25,6 +27,7 @@ class StoreHomeController extends Controller
      */
     public function index()
     {
-        return view('store.home');
+        $event_data = Event::where('store_id', Auth::guard('store')->user()->id)->get();
+        return view('store.home', ['event_data' => $event_data]);
     }
 }
