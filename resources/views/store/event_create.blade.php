@@ -9,13 +9,6 @@
     <div class="col-lg-8">
         <div>
             <p>イベント</p>
-
-            <!-- フラッシュメッセージ -->
-            @if (session('flash_message'))
-                <div class="flash_message">
-                    {{ session('flash_message') }}
-                </div>
-            @endif
         </div>
         <div class="card">
             <div class="card-header">{{ __('イベント新規作成') }}</div>

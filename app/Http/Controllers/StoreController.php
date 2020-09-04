@@ -49,6 +49,6 @@ class StoreController extends Controller
          * datetime-local 確認後、登録てすと
          **/
 
-        return redirect('/store/event_create')->with('flash_message', $title . ' の投稿が完了しました');
+        return redirect('/store/home')->with('flash_message', $title . ' の投稿が完了しました');
     }
 }
