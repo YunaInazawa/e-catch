@@ -10,7 +10,13 @@ use Auth;
 
 class StoreController extends Controller
 {
-    public function event_create() {    // store 以外はアクセスできないようにする
+    public function __construct()
+    {
+        $this->middleware('auth:store');
+        // $this->middleware('guest:store')->except('logout');
+    }
+
+    public function event_create() {
         $genreData = Genre::all();
 
         return view('store.event_create', ['genreData' => $genreData]);
