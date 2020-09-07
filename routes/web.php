@@ -14,10 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'GuestController@home');
-Route::get('/log_store', 'GuestController@log_store');
-Route::get('/log_user', 'GuestController@log_user');
-Route::get('/regi_store', 'GuestController@regi_store');
-Route::get('/regi_user', 'GuestController@regi_user');
 
 Route::get('/store/event_create', 'StoreController@event_create')->name('event_create');
 Route::post('store/event_new', 'StoreController@event_new')->name('event_new');
