@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -17,15 +18,16 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
+    <link href="{{ asset('css/layouts/header.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
+                <h5 class="navbar-brand" onclick="location.href='{{ url('/home') }}'">
+                    ロゴ
+                </h5>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -40,6 +42,9 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @if( Auth::guard('store')->check() )
+                            <li class="nav-item"><a href="{{ url('/store/event_create') }}">イベント作成</a></li>
+                            <li class="nav-item"><a href="#">情報版</a></li>
+                            <li class="nav-item"><a href="#">お知らせ</a></li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::guard('store')->user()->name }} <span class="caret"></span>

@@ -1,0 +1,15 @@
+.submenu{
+    width: 100%;
+    background-color: azure;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.ev-cards{
+    width: 90%;
+    height: 200px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
