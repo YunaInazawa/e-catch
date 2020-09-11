@@ -30,24 +30,26 @@
                 検索
             </button>
         </div>
+        <!-- とりあえず全件表示してる -->
+        @foreach( $event_data as $data )
         <div class="card-body">
             <div class="card">
                 <div class="row">
                 <div class="col-md-6">
-                    <label>タイトル</label><label>♡</label>
-                    <p>店舗名</p>
-                    <p>日時：○月×日　１０：２０～　○月×日　１０：２０</p>
-                    <p>内容（一部）</p>
+                    <label>{{ $data->title }}</label><label>♡</label>
+                    <p>{{ $data->store->name }}</p>
+                    <p>日時：{{ $data->start }} ~ {{ $data->end }}</p>
+                    <p>イベント詳細（一部）</p>
                 </div>
                 <div class="col-md-6">
-                    <img>ココイメージ
-                </div>
-                <div class="col-md-12">
-                    詳細表示
+                    @if( !is_null($data->image) )
+                    <img src="{{ asset('storage/event/' . $data->image) }}" width="200px">
+                    @endif
                 </div>
                 </div>
             </div>
         </div>
+        @endforeach
         <div class="card-footer">
             最初　１　２　３　４　５　…　最終
         </div>

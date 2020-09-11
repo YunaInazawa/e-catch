@@ -13,10 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// TOP
 Route::get('/', 'GuestController@home');
 
+// イベント作成
 Route::get('/store/event_create', 'StoreController@event_create')->name('event_create');
-Route::post('store/event_new', 'StoreController@event_new')->name('event_new');
+Route::post('/store/event_new', 'StoreController@event_new')->name('event_new');
+
+// イベント一覧
+Route::get('/event_list', 'GuestController@event_list')->name('event_list');
+
+// 詳細
+Route::get('/event_details/{id}', 'GuestController@event_details')->name('event_details');
+Route::get('/user_details/{id}', 'GuestController@user_details')->name('user_details');
+Route::get('/store_details/{id}', 'GuestController@store_details')->name('store_details');
 
 Auth::routes();
 

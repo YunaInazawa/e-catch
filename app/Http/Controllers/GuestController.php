@@ -4,32 +4,43 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Event;
+use App\User;
+use App\Store;
 
 class GuestController extends Controller
 {
+    // TOP
     public function home()
     {
         $eventData = Event::all();
         return view('guest/home', ['eventData' => $eventData]);
     }
 
-    public function log_store()
+    // イベント一覧
+    public function event_list()
     {
-        return view('guest/log_store');
+        $event_data = Event::all();
+        return view('event_list', ['event_data' => $event_data]);
     }
 
-    public function log_user()
+    // イベント詳細
+    public function event_details( $id = 1 )
     {
-        return view('guest/log_user');
+        $event_data = Event::where('id', $id)->first();
+        return view('event_details', ['event_data' => $event_data]);
     }
 
-    public function regi_store()
+    // ユーザ詳細
+    public function user_details( $id = 1 )
     {
-        return view('guest/regi_store');
+        $user_data = User::where('id', $id)->first();
+        return view('user_details', ['user_data' => $user_data]);
     }
 
-    public function regi_user()
+    // 店舗詳細
+    public function store_details( $id = 1 )
     {
-        return view('guest/regi_user');
+        $store_data = Store::where('id', $id)->first();
+        return view('store_details', ['store_data' => $store_data]);
     }
 }
