@@ -1,4 +1,4 @@
-@extends('layouts.header_guest')
+@extends('layouts.app_store')
 <!DOCTYPE html>
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}" defer></script>

@@ -1,6 +1,6 @@
 <link href="{{ asset('css/layouts/header.css') }}" rel="stylesheet">
 <header class="navbar navbar-fixed-top navbar-inverse">
-  <h1 onclick="location.href='{{ url('/') }}'">ロゴ</h1>
+  <h1 onclick="location.href='{{ url('/') }}'">E-Catch</h1>
   <nav class="navbar navbar-expand-lg  navbar-light">
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#header" aria-controls="header" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

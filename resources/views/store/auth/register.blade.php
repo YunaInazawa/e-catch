@@ -48,7 +48,7 @@
                                 <div class="col-md-6">
                                     <input type="text" class="inputs form-control" name="rep_first_name" placeholder="名前" autocomplete="rep_first_name">
                                     <input type="text" class="inputs form-control" name="rep_last_name" placeholder="苗字" autocomplete="rep_last_name">
-                                    <p>※ここにエラー文が入る←エラーが発生した時だけ表示させたい。</p>
+                                    <!-- <p>※ここにエラー文が入る←エラーが発生した時だけ表示させたい。</p>-->
                                 </div>
                         </div>
 
@@ -84,7 +84,7 @@
                             <label class="col-md-4 col-form-label text-md-right"><label class="required_item">※</label>{{ __('電話番号') }}</label>        
                             <div class="col-md-6">
                                 <input type="text" class="inputs form-control" name="TEL" placeholder="000-0000-0000" autocomplete="TEL">
-                                <p>※ここにエラー文が入る←エラーが発生した時だけ表示させたい。</p>            
+                                    <!-- <p>※ここにエラー文が入る←エラーが発生した時だけ表示させたい。</p>-->       
                             </div>
                         </div>
 
@@ -92,7 +92,7 @@
                             <label class="col-md-4 col-form-label text-md-right"><label class="required_item">※</label>{{ __('郵便番号') }}</label>
                             <div class="col-md-6">
                                 <input type="text" class="inputs form-control" name="postal_code" placeholder="999-9999" autocomplete="postal_code">
-                                <p>※ここにエラー文が入る←エラーが発生した時だけ表示させたい。</p>
+                                    <!-- <p>※ここにエラー文が入る←エラーが発生した時だけ表示させたい。</p>-->
                             </div>
                         </div>
 
@@ -100,7 +100,7 @@
                             <label class="col-md-4 col-form-label text-md-right"><label class="required_item">※</label>{{ __('住所') }}</label>
                             <div class="col-md-6">
                                 <input type="text" class="inputs form-control" name="street_addr" placeholder="○○県××町９９" autocomplete="street_addr">
-                                <p>※ここにエラー文が入る←エラーが発生した時だけ表示させたい。</p>
+                                    <!-- <p>※ここにエラー文が入る←エラーが発生した時だけ表示させたい。</p>-->
                             </div>
                         </div>
                         

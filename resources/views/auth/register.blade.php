@@ -56,7 +56,7 @@
                             <label class="col-md-4 col-form-label text-md-right"><label class="required_item">※</label>{{ __('誕生日') }}</label>
                             <div class="col-md-6">
                                 <input type="date" class="inputs form-control" name="birth_day" value="1990-01-01" autocomplete="birth_day">
-                                <p>※ここにエラー文が入る←エラーが発生した時だけ表示させたい。</p>
+                                    <!-- <p>※ここにエラー文が入る←エラーが発生した時だけ表示させたい。</p>-->
                             </div>
                         </div>
 
@@ -64,7 +64,7 @@
                             <label class="col-md-4 col-form-label text-md-right"><label class="required_item">※</label>{{ __('郵便番号') }}</label>
                             <div class="col-md-6">
                                 <input type="text" class="inputs form-control" name="postal_code" placeholder="999-9999" autocomplete="postal_code">
-                                <p>※ここにエラー文が入る←エラーが発生した時だけ表示させたい。</p>
+                                    <!-- <p>※ここにエラー文が入る←エラーが発生した時だけ表示させたい。</p>-->
                             </div>
                         </div>    
 
