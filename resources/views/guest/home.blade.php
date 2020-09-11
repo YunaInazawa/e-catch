@@ -7,6 +7,7 @@
 <link href="{{ asset('css/layouts/guesthome.css') }}" rel="stylesheet">
 <html>
 @section('content')
+<?php $flg_img = 0;?>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-lg-10 mainimg">
@@ -19,24 +20,25 @@
                 @foreach( $eventData as $d )
                 <!-- -> {{ $d->id }} : {{ $d->title }} : {{ $d->content }} : {{ $d->postal_code }} : {{ $d->street_addr }} : {{ $d->store->name }} : {{ $d->genre->content }}-->        
                 @if( !is_null($d->image) )
-                @if(($d->id) == 1)
+                    @if($flg_img == 0)
 
-                <div class="carousel-item active">
-                    <img class="d-block blur" src="{{ asset('storage/event/' . $d->image) }}" width="100%" height="400px">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>{{$d->title}}</h5>
-                        <p>{{$d->genre->content}}</p>
+                    <div class="carousel-item active">
+                        <img class="d-block blur" src="{{ asset('storage/event/' . $d->image) }}" width="100%" height="400px">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>{{$d->title}}</h5>
+                            <p>{{$d->genre->content}}</p>
+                        </div>
                     </div>
-                </div>
-                @else
-                <div class="carousel-item">
-                    <img class="d-block blur" src="{{ asset('storage/event/' . $d->image) }}" width="100%" height="400px">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>{{$d->title}}</h5>
-                        <p>{{$d->genre->content}}</p>
+                    <?php $flg_img = 1?>
+                    @else
+                    <div class="carousel-item">
+                        <img class="d-block blur" src="{{ asset('storage/event/' . $d->image) }}" width="100%" height="400px">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>{{$d->title}}</h5>
+                            <p>{{$d->genre->content}}</p>
+                        </div>
                     </div>
-                </div>
-                @endif
+                    @endif
                 @endif
                 @endforeach
             </div>
