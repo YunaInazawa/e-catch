@@ -17,9 +17,11 @@ class GuestController extends Controller
     }
 
     // イベント一覧
-    public function event_list()
+    public function event_list( $page = 1 )
     {
-        $event_data = Event::all();
+        $end = $page * 5;
+        $start = $end - 4;
+        $event_data = Event::whereBetween('id', [$start, $end])->get();
         return view('event_list', ['event_data' => $event_data]);
     }
 

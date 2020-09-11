@@ -21,7 +21,7 @@ Route::get('/store/event_create', 'StoreController@event_create')->name('event_c
 Route::post('/store/event_new', 'StoreController@event_new')->name('event_new');
 
 // イベント一覧
-Route::get('/event_list', 'GuestController@event_list')->name('event_list');
+Route::get('/event_list/{page}', 'GuestController@event_list')->name('event_list');
 
 // 詳細
 Route::get('/event_details/{id}', 'GuestController@event_details')->name('event_details');
