@@ -59,6 +59,8 @@ class GuestController extends Controller
         // POST データの取得
         $type_id = $request->type_id;
         $usec_id = $request->usec_id;
+
+        // user_id ヘルパ作ったら楽( マルチ認証用 )
         if( Auth::check() ){
             $user = Auth::user()->id;
         }elseif( Auth::guard('store')->check() ){

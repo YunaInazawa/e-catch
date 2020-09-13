@@ -44,7 +44,7 @@
             <div class="card ev-cards row">
                 <div class="col-lg-8 col-sm-12">
                     <div class="row">
-                        <label class="col-lg-9"> {{ $data->title }} </label><label class="col-lg-3"> {{ $data->genre->content }} </label>
+                        <label class="col-lg-9"><a href="{{ route('event_details', ['id' => $data->id]) }}"> {{ $data->title }} </a></label><label class="col-lg-3"> {{ $data->genre->content }} </label>
                     </div>
                     <div class="row">
                         <label class="col-lg-12"> {{ $data->start }} ~ {{ $data->end }} </label>

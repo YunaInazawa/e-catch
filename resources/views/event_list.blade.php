@@ -41,7 +41,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="row">
-                                <label class="col-lg-10">{{ $data->title }}</label><label class="col-lg-2">♡</label>
+                                <label class="col-lg-10"><a href="{{ route('event_details', ['id' => $data->id]) }}">{{ $data->title }}</a></label><label class="col-lg-2">♡</label>
                                 <p class="col-lg-10">{{ $data->store->name }}</p>
                                 <p class="col-lg-12">日時：{{ $data->start }} ~ {{ $data->end }}</p>
                                 <p class="col-lg-10">イベント詳細（一部）</p>
