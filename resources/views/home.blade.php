@@ -46,35 +46,35 @@
                     
                     </div>
                  @endforeach   
+                
 
-
-                    <!-- お気に入りユーザ -->
+                    <!-- お気に入りユーザ 
                     <br />
                     【Favorite_User】<br />
                     @foreach( $favorite_user as $d )
                     -> {{ $d->name }}<br />
-                    @endforeach
+                    @endforeach-->
 
-                    <!-- お気に入り店舗 -->
+                    <!-- お気に入り店舗 
                     <br />
                     【Favorite_Store】<br />
                     @foreach( $favorite_store as $d )
                     -> {{ $d->name }}<br />
-                    @endforeach
+                    @endforeach-->
 
-                    <!-- お気に入りイベント -->
+                    <!-- お気に入りイベント
                     <br />
                     【Favorite_event】<br />
                     @foreach( $favorite_event as $d )
                     -> {{ $d->title }}<br />
-                    @endforeach
+                    @endforeach-->
 
-                    <!-- お気に入りコメント（掲示板実装後？） -->
+                    <!-- お気に入りコメント（掲示板実装後？） 
                     <br />
                     【Favorite_comment】<br />
                     @foreach( $favorite_comment as $d )
                     -> {{ $d->title }}<br />
-                    @endforeach
+                    @endforeach-->
         </div>
     </div>
 </div>
