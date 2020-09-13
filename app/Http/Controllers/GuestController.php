@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Carbon\carbon;
 use App\Event;
 use App\User;
 use App\Store;
+use App\Favorite;
+use Auth;
 
 class GuestController extends Controller
 {
@@ -43,6 +46,37 @@ class GuestController extends Controller
     public function store_details( $id = 1 )
     {
         $store_data = Store::where('id', $id)->first();
-        return view('store_details', ['store_data' => $store_data]);
+        $event_data = Event::where('store_id', $id)->get();
+        return view('store_details', ['store_data' => $store_data, 'event_data' => $event_data]);
+    }
+
+    // お気に入り登録
+    public function favorite( Request $request )
+    {
+        $request->session()->regenerateToken();
+        $now = Carbon::now();
+
+        // POST データの取得
+        $type_id = $request->type_id;
+        $usec_id = $request->usec_id;
+        if( Auth::check() ){
+            $user = Auth::user()->id;
+        }elseif( Auth::guard('store')->check() ){
+            $user = Auth::guard('store')->user()->id;
+        }
+
+        // favorite 存在チェック
+        
+
+        // favorites 追加
+        // $add_favorite = new Favorite;
+        // $add_favorite->type_id = $type_id;
+        // $add_favorite->usec_id = $usec_id;
+        // $add_favorite->user_id = $user;
+        // $add_favorite->created_at = $now;
+        // $add_favorite->updated_at = $now;
+        // $add_favorite->save();
+
+        return back();
     }
 }

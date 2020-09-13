@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+.center {
+    text-align: center;
+
+}
+
+.card {
+    padding: 10px;
+}

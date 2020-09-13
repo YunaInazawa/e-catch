@@ -28,6 +28,9 @@ Route::get('/event_details/{id}', 'GuestController@event_details')->name('event_
 Route::get('/user_details/{id}', 'GuestController@user_details')->name('user_details');
 Route::get('/store_details/{id}', 'GuestController@store_details')->name('store_details');
 
+// お気に入り登録
+Route::post('/favorite', 'GuestController@favorite')->name('favorite');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
