@@ -22,7 +22,7 @@ class GuestController extends Controller
         $end = $page * 5;
         $start = $end - 4;
         $event_data = Event::whereBetween('id', [$start, $end])->get();
-        return view('event_list', ['event_data' => $event_data]);
+        return view('event_list', ['event_data' => $event_data,'page' => $page]);
     }
 
     // イベント詳細
