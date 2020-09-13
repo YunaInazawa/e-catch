@@ -62,7 +62,7 @@
                                 <button class="btn btn-primary">MAIL</button>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="">{{ __('イベント') }}</a>
+                                    <a class="dropdown-item" href="{{ url('/event_list/1') }}">{{ __('イベント') }}</a>
                                     <a class="dropdown-item" href="">{{ __('情報版') }}</a>
                                     <a class="dropdown-item" href="">{{ __('お気に入り') }}</a>
                                     <a class="dropdown-item" href="">{{ __('設定') }}</a>
